@@ -1,7 +1,9 @@
 package com.kenshoo.integrations.service;
 
+import com.kenshoo.integrations.dao.IntegrationsDao;
 import com.kenshoo.integrations.entity.Integration;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface IntegrationsService {
@@ -9,7 +11,7 @@ public interface IntegrationsService {
      * Inserts data into the integrations table
      *
      * @param ksId a ks id, might be not normalized
-     * @param data
+     * @param data data to be inserted
      */
     void insertIntegration(String ksId, String data);
 
@@ -28,3 +30,4 @@ public interface IntegrationsService {
      */
     int migrate();
 }
+
